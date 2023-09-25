@@ -31,7 +31,7 @@
 Install via npm
 
 ```sh
-npm install tabletomd
+npm install tabletomd --save
 ```
 
 ### Remote (`convertUrl`)
@@ -43,8 +43,6 @@ const markdown = await convertUrl('https://www.npmjs.com/package/rc-table');
 ```
 
 ### Local (`convert`)
-
-Have a look in the examples.
 
 ```typescript
 import { convert } from 'tabletomd';
