@@ -51,6 +51,8 @@ console.log(converted);
 // | Centro comercial Moctezuma | Francisco Chang | Mexico  |
 ```
 
+[OUTPUT](https://github.com/yyz945947732/tabletomd/tree/master/example/convertOutput.md)
+
 ### Remote (`convertUrl`)
 
 ```typescript
@@ -58,6 +60,8 @@ import { convertUrl } from 'tabletomd';
 
 const markdown = await convertUrl('https://www.npmjs.com/package/rc-table');
 ```
+
+[OUTPUT](https://github.com/yyz945947732/tabletomd/tree/master/example/convertUrlOutput.md)
 
 ## Credits
 
