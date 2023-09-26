@@ -17,9 +17,9 @@ fs.writeFileSync(
   'utf-8'
 );
 
-const markdown = await convertUrl('https://www.npmjs.com/package/rc-table');
+const convertUrlOutput = await convertUrl('https://www.npmjs.com/package/rc-table');
 fs.writeFileSync(
   path.resolve(process.cwd(), './example/convertUrlOutput.md'),
-  markdown,
+  convertUrlOutput,
   'utf-8'
 );
