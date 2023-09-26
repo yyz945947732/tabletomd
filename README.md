@@ -43,8 +43,8 @@ import path from 'path';
 const html = fs.readFileSync(path.resolve(process.cwd(), './test/table.html'), {
   encoding: 'utf-8',
 });
-const converted = convert(html);
-console.log(converted);
+const markdown = convert(html);
+console.log(markdown);
 // |          Company           |     Contact     | Country |
 // |:---------------------------|:----------------|:--------|
 // |    Alfreds Futterkiste     |  Maria Anders   | Germany |
