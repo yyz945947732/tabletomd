@@ -40,10 +40,10 @@ npm install tabletomd --save
 import { convert } from 'tabletomd';
 import fs from 'fs';
 import path from 'path';
-const html = fs.readFileSync(path.resolve(process.cwd(), './test/table.html'), {
+const content = fs.readFileSync(path.resolve(process.cwd(), './test/table.html'), {
   encoding: 'utf-8',
 });
-const markdown = convert(html);
+const markdown = convert(content);
 console.log(markdown);
 // |          Company           |     Contact     | Country |
 // |:---------------------------|:----------------|:--------|
