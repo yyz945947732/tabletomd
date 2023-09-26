@@ -1,4 +1,4 @@
-/* istanbul ignore file */
+/* istanbul ignore file -- @preserve */
 
 // @ts-nocheck
 import fetch, { Headers, Request, Response } from 'node-fetch';

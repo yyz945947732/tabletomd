@@ -78,7 +78,7 @@ export function convert(html: string) {
  * @param {string} html string
  * @returns {string} string
  */
-/* istanbul ignore next */
+/* istanbul ignore next -- @preserve */
 export async function convertUrl(url: string) {
   try {
     const json = await Tabletojson.convertUrl(url);
