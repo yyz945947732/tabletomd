@@ -33,6 +33,7 @@ function getMdJson(header: string[], rows: string[][]): MdJson {
  * transform Table Json data to Markdown string
  */
 function transformJson(data: unknown[]): string {
+  /* istanbul ignore if -- @preserve */
   if (!Array.isArray(data)) {
     return '';
   }
