@@ -72,7 +72,7 @@ The following node libraries make this utility super easy:
 
 ## LICENSE
 
-[MIT](https://github.com/yyz945947732/cnname/blob/master/LICENSE)
+[MIT](https://github.com/yyz945947732/tabletomd/blob/master/LICENSE)
 
 ---
 
