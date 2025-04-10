@@ -1,6 +1,6 @@
 {
   "name": "tabletomd",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tabletomd attempts to convert local or remote HTML tables into Markdown Table with a very low footprint.",
   "homepage": "https://github.com/yyz945947732/tabletomd",
   "main": "dist/index.js",
