@@ -1,31 +1,6 @@
 import './fetch-polyfill';
-import { Tabletojson } from 'tabletojson/dist/lib/Tabletojson.js';
-import mdtable from 'mdtable';
-
-/**
- * @private
- *
- * json use by mdtable
- */
-interface MdJson {
-  header: string[];
-  alignment: string[];
-  rows: string[][];
-}
-
-/**
- * @private
- *
- * get json use by mdtable
- */
-function getMdJson(header: string[], rows: string[][]): MdJson {
-  const lens = header.length;
-  return {
-    header,
-    alignment: new Array(lens).fill('L'),
-    rows,
-  };
-}
+import { Tabletojson } from 'tabletojson';
+import { markdownTable } from 'markdown-table';
 
 /**
  * @private
@@ -43,15 +18,14 @@ function transformJson(data: unknown[]): string {
       const rows = [];
       const example = arr[0];
       const header = Object.keys(example);
+      rows.push(header);
       arr.forEach((item) => {
-        const row = Object.values(item);
+        const row = Object.values(item).map((item: string) =>
+          item.replace(/\|/g, '\\|')
+        );
         rows.push(row);
       });
-      const mdJson = getMdJson(header, rows);
-      const md = mdtable(mdJson, {
-        borders: true,
-        padding: 1,
-      });
+      const md = markdownTable(rows);
       result.push(md);
     }
   });

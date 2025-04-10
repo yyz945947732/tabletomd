@@ -45,9 +45,9 @@ const content = fs.readFileSync(path.resolve(process.cwd(), './test/table.html')
 });
 const markdown = convert(content);
 console.log(markdown);
-// |          Company           |     Contact     | Country |
-// |:---------------------------|:----------------|:--------|
-// |    Alfreds Futterkiste     |  Maria Anders   | Germany |
+// | Company                    | Contact         | Country |
+// | -------------------------- | --------------- | ------- |
+// | Alfreds Futterkiste        | Maria Anders    | Germany |
 // | Centro comercial Moctezuma | Francisco Chang | Mexico  |
 ```
 
@@ -68,7 +68,7 @@ const markdown = await convertUrl('https://www.npmjs.com/package/rc-table');
 The following node libraries make this utility super easy:
 
 - [tabletojson](https://github.com/maugenst/tabletojson)
-- [mdtable](https://github.com/Jamesford/mdtable)
+- [markdown-table](https://github.com/wooorm/markdown-table)
 
 ## LICENSE
 

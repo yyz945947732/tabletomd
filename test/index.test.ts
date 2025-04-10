@@ -21,20 +21,20 @@ const twoTableHtml = fs.readFileSync(
 describe('tabletomd', () => {
   it('convert', () => {
     expect(convert(tableHtml))
-      .equal(`|          Company           |     Contact     | Country |
-|:---------------------------|:----------------|:--------|
-|    Alfreds Futterkiste     |  Maria Anders   | Germany |
+      .equal(`| Company                    | Contact         | Country |
+| -------------------------- | --------------- | ------- |
+| Alfreds Futterkiste        | Maria Anders    | Germany |
 | Centro comercial Moctezuma | Francisco Chang | Mexico  |`);
   });
   it('convert two table', () => {
     expect(convert(twoTableHtml))
-      .equal(`|          Company           |     Contact     | Country |
-|:---------------------------|:----------------|:--------|
-|    Alfreds Futterkiste     |  Maria Anders   | Germany |
+      .equal(`| Company                    | Contact         | Country |
+| -------------------------- | --------------- | ------- |
+| Alfreds Futterkiste        | Maria Anders    | Germany |
 | Centro comercial Moctezuma | Francisco Chang | Mexico  |
 
 | Emil | Tobias | Linus |
-|:-----|:-------|:------|
-|  16  |   14   |  10   |`);
+| ---- | ------ | ----- |
+| 16   | 14     | 10    |`);
   });
 });
